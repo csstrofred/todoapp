@@ -1,0 +1,19 @@
+:root {
+  --primary-color: #66806a; /* jade */
+  --secondary-color: #3f403f;
+  --tertiary-color: #ffffff;
+
+  --primary-background-color: #e3e9ff; /* platinum */
+  --secondary-background-color: var(--tertiary-color);
+  --tertiary-background-color: var(--primary-color);
+
+  --primary-text-color: var(--secondary-color);
+  --secondary-text-color: var(--tertiary-color);
+
+  --danger-color: #ffc286;
+}
+
+/* 66806A
+B4C6A6
+FFC286
+FFF1AF */

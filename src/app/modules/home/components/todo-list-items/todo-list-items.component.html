@@ -1,0 +1,18 @@
+<section [ngClass]="{ loading: !taskList.length }">
+  <ul *ngIf="taskList.length">
+    <li *ngFor="let item of taskList; let i = index">
+      <input type="checkbox" [(ngModel)]="item.checked" />
+      <input
+        type="text"
+        [(ngModel)]="item.task"
+        [ngClass]="{ checked: item.checked }"
+      />
+      <button (click)="removeItem(i)">
+        <i class="lni lni-trash-can"></i>
+      </button>
+    </li>
+  </ul>
+</section>
+
+<app-todo-input-add></app-todo-input-add>
+<app-footer *ngIf="taskList.length" (click)="removeAll()"></app-footer>

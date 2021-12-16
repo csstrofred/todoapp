@@ -1,0 +1,20 @@
+@import "../../../../../dist/css/variables.css";
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+:host input {
+  width: 80%;
+  border: none;
+  background: var(--tertiary-background-color);
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+:host input::placeholder {
+  color: var(--secondary-text-color);
+}
