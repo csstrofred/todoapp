@@ -4,6 +4,7 @@
       <input type="checkbox" [(ngModel)]="item.checked" />
       <input
         type="text"
+        (keyup)="validateInput(item.task, i)"
         [(ngModel)]="item.task"
         [ngClass]="{ checked: item.checked }"
       />
@@ -14,5 +15,5 @@
   </ul>
 </section>
 
-<app-todo-input-add></app-todo-input-add>
+<app-todo-input-add (emmitter)="setNewTaskList($event)"></app-todo-input-add>
 <app-footer *ngIf="taskList.length" (click)="removeAll()"></app-footer>

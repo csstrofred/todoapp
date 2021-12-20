@@ -14,6 +14,10 @@ export class TodoInputAddComponent implements OnInit {
   ngOnInit(): void {}
 
   submitNewTask() {
-    this.emmitter.emit(this.newTask);
+    this.newTask = this.newTask.trim();
+    if (this.newTask.length >= 2) {
+      this.emmitter.emit(this.newTask);
+      this.newTask = '';
+    }
   }
 }
